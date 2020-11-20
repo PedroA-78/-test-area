@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            border: none;
+        } */
+
+        .container {
+            /* width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center; */
+        }
+
+        .container .teste {
+            width: 20px;
+            height: 0px;
+            border: blueviolet 5px solid;
+            overflow: hidden;
+            transition: all 200ms ease-in-out;
+        }
+
+        .teste.transition  {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="Go()">Só vai</button>
+    <hr>
+    <div class="container">
+        <div class="teste">aaaaa</div>
+    </div>
+
+    <script>
+        let div = document.querySelector(".container div")
+
+        function Go() {
+            div.classList.toggle("transition")
+        }
+    </script>
+</body>
+</html>

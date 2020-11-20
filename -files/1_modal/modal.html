@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .modal_container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal_one {
+            border: 5px solid black;
+            position: relative;
+        }
+
+        .modal_one img, .modal_two img  {
+            display: block;
+        }
+
+        .modal_one:hover::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .modal_two_container {
+            position: relative;
+            border: 5px solid black;
+            margin-left: 16px;
+        }
+
+        .modal_two::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal_two:hover::before {
+            content: "";
+            position: unset;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            background-color: unset;
+        }
+
+        </style>
+</head>
+<body>
+    <div class="modal_container">
+
+        <div class="modal_one"><img src="assets/01.jpg"></div>
+       
+        <div class="modal_two_container">
+            <div class="modal_two"><img src="assets/02.jpg"></div> 
+        </div>
+        
+    </div>
+</body>
+</html>

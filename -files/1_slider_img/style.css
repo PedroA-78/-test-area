@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.container {
+    width: 320px;
+    height: 320px;
+    border: 3px solid black;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    overflow: hidden;
+}
+
+.img_container {
+    display: flex;
+    animation: slider 20000ms ease-in-out infinite;
+}
+
+@keyframes slider {
+    0%, 30%, 100% {
+        transform: translateX(0);
+    }
+
+    33%, 60% {
+        transform: translateX(-320px);
+    }
+
+    66%, 99% {
+        transform: translateX(-640px);
+    }
+
+}
