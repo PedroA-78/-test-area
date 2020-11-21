@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --main-color: #8257e6;
+}
+
+/* === AVULSOS === */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === CARDS_CHALLENGES === */
+
+.cards_challenges {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card_challenges {
+    text-align: center;
+    margin: 32px 24px;
+    padding: 8px;
+    background-color: rgba(0, 0, 255, 0.8);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.card_challenges h1 {
+    color: white;
+}
+
+/* === MODAL === */
+
+.modal {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    display: none;
+    opacity: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_show {
+    display: flex;
+    animation: modalShow 300ms linear forwards;
+}
+
+@keyframes modalShow {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: flex;
+        opacity: 0;
+    }
+
+    100% {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+.modal_content {
+    margin: 72px 0;
+    width: 500px;
+    background-color: white;
+}
+
+.card_modal {
+    position: relative;
+    padding: 32px 24px;
+    display: none;
+}
+
+.card_show {
+    display: block;
+}
+
+.close_button {
+    position: absolute;
+    right: 16px;
+    cursor: pointer;
+}
+
+.modal_item_title {
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.modal_item_subtitle {
+    margin: 16px 0 8px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.modal_item_code {
+    display: inline-block;
+    background-color: rgba(0, 0, 255, 0.2);
+    margin-top: 8px;
+    padding: 8px;
+    border-left: 5px solid blue;
+    border-radius: 8px;
+}
+
+.modal_item_list {
+    padding: 8px 24px;
+    list-style-type: square;
+}
+
+.modal_item_list li {
+    margin: 8px 0;
+}

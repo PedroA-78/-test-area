@@ -1,0 +1,32 @@
+<div class="card_item">
+                    <span class="material-icons close_button">close</span>
+
+                    <h2 class="card_item_title">Sobre o desafio</h2>
+
+                    <p class="">Criar um arquivo html que contenha um favicon e um header com 3 links: Comunidade, Email e Telefone.</p>
+                    <h3 class="card_item_subtitle">Favicon</h3>
+
+                    <p class="">O favicon é o ícone que aparece na aba do navegador. O arquivo está disponível com o nome favicon.ico. Para utilizá-lo é necessário importá-lo com a tag link no html. ser dada a dica de utilizar a tag link na head do html.</p>
+
+                    <code class="">&lt;link strel="icon" href="favicon.ico" type="image/x-icon"&gt;</code>
+
+                    <h3 class="card_item_subtitle">Links</h3>
+
+                    <ul class="">
+                        <li>Comunidade: Link que deve apontar para o convite da comunidade aberta da rocketseat (https://discordapp.com/invite/gCRAFhc)</li>
+                        <li>Email: Link que deve chamar o comando de enviar email para o destinatário oi@rocketseat.com.br. Dica: utilize o comando mailto dentro do href;</li>
+                        <li>Telefone: Link que deve chamar o comando de realizar uma ligação para o número +5547992078767. Dica: utilize o comando tel dentro do href;</li>
+                    </ul>
+
+                    <h3 class="card_item_subtitle">Estilização</h3>
+
+                    <p class="">Você tem liberdade para escolher a estilização que preferir para esse desafio, mas alguns pontos são obrigatórios:</p>
+                    
+                    <ul class="">
+                        <li>Deve ser aplicado um background</li>
+                        <li>Deve ser utilizada a fonte Roboto</li>
+                        <li>O header precisa ocupar todo o espaço lateral e superior (body sem margin)</li>
+                        <li>O header precisa ter um espaçamento interno de 30px em todas as direções</li>
+                        <li>Os links devem ter um espaçamento de 30px entre si</li>
+                    </ul>
+                </div>
