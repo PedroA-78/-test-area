@@ -1,0 +1,24 @@
+.ingredientes h2, 
+.modo_de_preparo h2, 
+.informacao h2 {
+    display: inline-block;
+}
+
+.ingredientes span, 
+.modo_de_preparo span, 
+.informacao span {
+    cursor: pointer;
+}
+
+.ingreList,
+.prepList,
+.info {
+    overflow: hidden;
+    max-height: 1000px;
+    transition: all 200ms ease-in-out;
+}
+
+.unshow {
+    max-height: 0;
+    transition: all 200ms ease-in-out;
+}
