@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Convertendo timestamp em um padrão de data</h1>
+
+    <hr>
+
+    <div class="output"></div>
+
+    
+    <script>
+        const output = document.querySelector(".output")
+
+        const yearBirth = parseInt(prompt("Digite o ano em que você nasceu: "))
+        const monthBirth = parseInt(prompt("Digite o mês em que você nasceu: ")) - 1
+        const dayBirth = parseInt(prompt("Digite o dia em que você nasceu: "))
+
+        const birthDate = new Date(yearBirth, monthBirth, dayBirth).getTime()
+
+        const currentDate = new Date()
+        const birth = new Date(birthDate)
+
+        let age = currentDate.getFullYear() - birth.getFullYear()
+
+        const month = currentDate.getMonth() - birth.getMonth()
+        
+        if (month < 1 && currentDate.getDate() < birth.getDate()) {
+            age -= 1
+        }
+
+
+        output.innerHTML = `Data de nascimento: ${birth} <br>Idade: ${age}`
+    </script>
+</body>
+</html>
