@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        input {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="campos">
+        <input type="text" class="field">
+    </div>
+
+    <button id="btn" type="button">Adicionar</button>
+
+    <script>
+        const fieldsCont = document.querySelector(".campos")
+        const btn = document.getElementById("btn")
+
+        btn.addEventListener("click", function(){
+            let fields = document.querySelectorAll(".field")
+            const newField = fields[fields.length - 1].cloneNode(true)
+
+            clean(newField)
+            fieldsCont.appendChild(newField)
+
+            fields = document.querySelectorAll(".field")
+
+            fields[fields.length - 1].focus()
+        })
+
+        function clean(field){
+            field.value = ""
+        }
+    </script>
+</body>
+</html>
