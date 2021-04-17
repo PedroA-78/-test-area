@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="/" method="POST">
+        <h2 class="title">Upload de imagens</h2>
+        <input type="file" accept="image/*">
+        <div class="preview_wrap">
+            <img class="preview" src="" style="display: none">
+        </div>
+        <input type="hidden" name="image">
+        <div class="button_wrap">
+            <button class="submit">Enviar!</button>
+        </div>
+    </form>
+    </div>
+    <div class="container">
+        <h2 class="title">Imagens salvas</h2>
+        {% for file in files %}
+        <img src="{{file.image}}">
+        {% endfor %}
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
